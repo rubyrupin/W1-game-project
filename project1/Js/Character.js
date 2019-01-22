@@ -6,8 +6,14 @@ class Character {
 		this.x=x;
 		this.y=y;
 	}
+
 	drawCharacter(ctx){
 		ctx.fillStyle = this.color;
 		ctx.fillRect(this.x, this.y, this.width, this.height);
+	}
+	moveCharacter(){
+		
+
+
 	}
 }

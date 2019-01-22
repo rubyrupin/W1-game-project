@@ -5,6 +5,7 @@ class MyGameArea {
 		this.canvas = document.getElementById('canvas')
 		this.context = this.canvas.getContext("2d");
 		this.mine= new Character(100,100,"red",100,100);
+		this.obstacle= new Obstacle( )
 	}
 
 	drawWorld(){
@@ -28,6 +29,9 @@ class MyGameArea {
 			}
 			if(event.keyCode==32){//TODO:space to make it jump
 				this.mine.y-=80
+				setTimeout(function(){
+					this.mine.y+=80
+				}.bind(this), 1000)
 			 }
 		}.bind(this)
 	}
